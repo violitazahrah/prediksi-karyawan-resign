@@ -16,14 +16,7 @@
 <body style="background-color: #F8F9F9;">
   <!--   Header -->
   <div class="d-flex justify-content-between align-items-center px-5 py-3">
-    <div>
-      <img src={{ url_for('static', filename="images/orbit.png" ) }} height="50" width="auto">
-    </div>
-    <h2> Violita Aditya Zahrah | Sycamore</h2>
-    <h1>Sistem Prediksi Karyawan Resign</h1>
-    <div>
-      <img src={{ url_for('static', filename="images/kampus-merdeka.png" ) }} height="50" width="auto">
-    </div>
+    <h1 class="text-center">Sistem Prediksi Karyawan Resign</h1>
   </div>
   <!-- Header End  -->
 
@@ -49,7 +42,8 @@
             <!-- Input Kecelakaan Kerja -->
             <div class="mb-3">
               <p class="mb-0">Pernah mengalami kecelakaan kerja</p>
-              <input class="form-check-input" name="is_pernah_kecelakaan_kerja" type="radio" value="1" id="pernah" required>
+              <input class="form-check-input" name="is_pernah_kecelakaan_kerja" type="radio" value="1" id="pernah"
+                required>
               <label class="form-check-label mr-5" for="pernah">
                 Pernah
               </label>
@@ -73,7 +67,8 @@
 
             <!--  Tingkat Kepuasan  -->
             <label for="tingkat_kepuasan" class="form-label">Tingkat Kepuasan</label>
-            <input type="range" name="tingkat_kepuasan" class="form-range" id="tingkat_kepuasan" min="0" max="110" required>
+            <input type="range" name="tingkat_kepuasan" class="form-range" id="tingkat_kepuasan" min="0" max="110"
+              required>
             <div class="d-flex justify-content-between">
               <p>0</p>
               <p>100</p>
@@ -91,14 +86,15 @@
         <div class="col-4 pt-5 px-2 card gx-3" style="background-color: #E2F6FF;">
           <h3 class="text-center">Hasil Prediksi</h2>
             {% if hasil_prediksi %}
-            <p class="text-center">Karyawan tersebut diprediksi <span class="fw-bold">{{nilai_kepercayaan}}% {{hasil_prediksi}}</span></p>
+            <p class="text-center">Karyawan tersebut diprediksi <span class="fw-bold">{{nilai_kepercayaan}}%
+                {{hasil_prediksi}}</span></p>
             {% endif %}
         </div>
       </div>
     </div>
   </div>
 
-	<!-- Bootstrap JS -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
